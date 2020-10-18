@@ -1,16 +1,19 @@
 const express = require("express");
+
 const morgan = require("morgan");
 const helmet = require("helmet");
 const { join } = require("path");
-
-// const SERVER_CONFIGS = require('./constants/server');
-
-// const configureRoutes = require('./routes');
- 
 const cors = require('cors');
 const bodyParser = require('body-parser');
- 
 const CORS_WHITELIST = require('./constants/frontend');
+const app = express();
+const port = process.env.SERVER_PORT || 3001;
+// const SERVER_CONFIGS = require('./constants/server');
+// const configureRoutes = require('./routes');
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(logger("dev"));
+
  
 const corsOptions = {
   origin: (origin, callback) =>
@@ -31,9 +34,6 @@ const app = express();
 
 // configureRoutes(app);
  
-
-const port = process.env.SERVER_PORT || 3000;
-
 app.use(morgan("dev"));
 app.use(helmet());
 app.use(express.static(join(__dirname, "build")));
