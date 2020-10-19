@@ -29,13 +29,18 @@
 }
 
   footer {
-    min-height: 20px !important;
+    min-height: 0rem !important;
+    max-height: 0rem;
     width: 100%;
     text-align: center;
     background-color: rgb(247, 89, 62);
-    bottom: 1px;
+    padding: 20px;
+    bottom: 0px;
     color: white;
-    position: fixed;
+    position: sticky;
+  }
+  .footerWords {
+    transform: translateY(-10px);
   }
 
   .navColor {
