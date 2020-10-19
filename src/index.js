@@ -68,16 +68,16 @@ import 'bootstrap/dist/css/bootstrap.css';
 //   res.json({ error, status });
 // });
 
-// app.listen(3000);
+// app.listen(3001);
 
 
-const onRedirectCallback = (appState) => {
+function onRedirectCallback(appState) {
   history.push(
     appState && appState.returnTo
       ? appState.returnTo
       : window.location.pathname
   );
-};
+}
 
 ReactDOM.render(
   <Auth0Provider
