@@ -1,6 +1,7 @@
 .productImg {
     width: 100%;
     height: 13rem;
+    border-radius: 15px;
 }
 .btn-pricecart {
     justify-content: space-between;
@@ -8,6 +9,7 @@
 .cartImg {
     width: 6rem;
     height: 6rem;
+    border-radius: 5px;
 }
 .cartbtn {
     background-color: coral !important;

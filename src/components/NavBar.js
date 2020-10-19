@@ -21,6 +21,7 @@ import {
 } from "reactstrap";
 
 import { useAuth0 } from "@auth0/auth0-react";
+import Ads from "./Ads";
 
 function NavBar(props) {
   console.log(props);
@@ -60,9 +61,9 @@ function NavBar(props) {
                   <NavbarBrand>Beanie Gs</NavbarBrand>
                 </NavLink>
               </NavItem>
-
+                <Ads/>
               {isAuthenticated && (
-                <NavItem>
+                <NavItem className="cartNav">
                   <NavLink
                     tag={RouterNavLink}
                     to="/cart"
@@ -162,6 +163,18 @@ function NavBar(props) {
                   </RouterNavLink>
                 </NavItem>
                 <NavItem>
+                  <NavLink
+                    tag={RouterNavLink}
+                    to="/cart"
+                    exact
+                    activeClassName="router-link-exact-active"
+                    >
+                    <h4 ><FaShoppingCart className="carto"/> 
+                      <span className="cartCount">{props.cartProps.cartNums}</span>
+                    </h4>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
                   <FontAwesomeIcon icon="power-off" className="mr-3" />
                   <RouterNavLink
                     to="#"
@@ -171,6 +184,7 @@ function NavBar(props) {
                     Log out
                   </RouterNavLink>
                 </NavItem>
+                
               </Nav>
             )}
           </Collapse>

@@ -34,17 +34,18 @@
     width: 100%;
     text-align: center;
     background-color: rgb(247, 89, 62);
-    padding: 20px;
+    /* padding: 20px; */
     bottom: 0px;
     color: white;
-    position: sticky;
+    /* position: sticky; */
   }
   .footerWords {
     transform: translateY(-10px);
   }
 
   .navColor {
-    background: linear-gradient(180deg, #5a53534f, #9e9ea59c) !important;
+    background: linear-gradient(180deg, #5a53534f, #5353a59c) !important;
+    
   }
   .cartCount {
     font-size: 1rem;
@@ -56,3 +57,14 @@
     color: gray;
   }
   
+.cartNav {
+  transform: translateX(70px);
+  margin-top: 5px;
+}
+.navbar {
+  overflow: hidden !important;
+  width: 100%;
+  top: 1px !important;
+  /* position: fixed !important; */
+  /* margin-bottom: 30px; */
+}
