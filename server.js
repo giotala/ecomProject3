@@ -1,13 +1,13 @@
 const express = require("express");
-
+const mongoose = require("mongoose");
 const morgan = require("morgan");
 const helmet = require("helmet");
 const { join } = require("path");
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const CORS_WHITELIST = require('./constants/frontend');
-const app = express();
-const port = process.env.SERVER_PORT || 3001;
+
+const port = process.env.PORT || 3001;
 // const SERVER_CONFIGS = require('./constants/server');
 // const configureRoutes = require('./routes');
 app.use(express.urlencoded({ extended: true }));
@@ -30,8 +30,13 @@ const configureServer = app => {
  
 module.exports = configureServer;
 const app = express();
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/";
 
-
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("build"));
+}
 // configureRoutes(app);
  
 app.use(morgan("dev"));
