@@ -38,7 +38,7 @@ const contentData = [
   },
   {
     id: "5",
-    title: "Beanie, Akatsuki (black)",
+    title: "Beanie, Akatsuki (white)",
     link: "https://www.wegmans.com/wp-content/uploads/3961327_full-width-meals-kids-health-2-mobile.jpg",
     img: "https://ae01.alicdn.com/kf/H797edfb2a7994ca1bd4d42354d6d2dafq.jpg",
     price: "10",

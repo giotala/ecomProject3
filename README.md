@@ -16,10 +16,12 @@ This app lets users browse, search and buy their favorites beanies and other pro
   Redux
   Fontawesome
   morgan
-  helmet
+  helmet for security
 ## Installation
   npm i
+  npm start
 ## Photos
+<iframe src="https://drive.google.com/file/d/19rcrWOJfsqvqSaR3JR_ljm6J3cLKXQ6s/preview" width="640" height="480"></iframe>
 <!-- <img src="./Screenshots/login.png" alt="Notepad--">
 <img src="./Screenshots/notes.png" alt="Notepad--">
 <img src="./Screenshots/edit.png" alt="Notepad--">
